@@ -25,6 +25,7 @@ fourth.addEventListener("click", function () {
 });
 fifth.addEventListener("click", function(){
 storageField.innerText = "180";
+updateTotal();
 });
 
 const deliveryField = document.getElementById("shipping4");
@@ -37,15 +38,17 @@ sixth.addEventListener("click", function(){
 seventh.addEventListener("click", function() {
   deliveryField.innerText = "20";
   updateTotal();
-});
+})
 
-function updateTotal(){
-    const ship1 = document.getElementById('shipping2');
-    const shiptotal = parseInt(ship1.innerText);
-        const ship2 = document.getElementById("shipping3");
-        const shiptotal2 = parseInt(ship2.innerText);
-            const ship3 = document.getElementById("shipping4");
-            const shiptotal3 = parseInt(ship3.innerText);
-            const ship4 = shiptotal + shiptotal2 + shiptotal3; ;
-            document.getElementById('shipping5').innerText= ship4 ;
+
+
+const total = document.getElementById('shipping5')
+function updateTotal() {
+const memory = parseInt(memoryField.innerText);
+const storage = parseInt(storageField.innerText);
+const delivery = parseInt(deliveryField.innerText);
+const fullTotal = memory + storage + delivery ;
+document.getElementById('shipping5').innerText = fullTotal + 1299; 
+document.getElementById('shipping').innerText=fullTotal + 1299 ;
 }
+

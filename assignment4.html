@@ -6,18 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css">
+    <style>
+      .full-macdetails{
+        margin-right: 150px;
+      }
+    </style>
+    
 </head>
 <body>
   <div class="grid grid-cols-2">
   <div>
-
 <img class="w-52 mx-auto mt-4" src="mac.png" alt="">
   </div>
 
-
- <div>
-           <div>
+  <div class="full-macdetails">
+     <div>
 <h1 class="text-4xl font-semibold mt-3"> Customize your Blue 24-inche iMac with Apple M1 chip. </h1>
    <p class="mt-4">
 Apple M1 chip with 8-core CPU with 4 performance cores and 4 efficiency cores, 7-core GPU, and 16-core Neural Engine
@@ -65,13 +68,15 @@ Magic Keyboard - US English
 
   <li>Total Price</li><li>$<span id="shipping5">1299</span></li>
 </ul>
-
+  </div>
+  <h3 class="text-2xl mt-3">Add promo code</h3>
+<div><input id="deposit-amount" class="border-solid border-2 border-gray-500 w-3/7 rounded mb-4 px-2 my-4" type="text" placeholder="add promo code"><br>
+<button id="deposit-btn" class="bg-red-800 text-white px-3 py-2 rounded">Apply</button>
   </div>
   </div>
 
-
-
-  </div>
+ <div class=" text-4xl text-center mt-4 mb-4">
+ <h1>Total Price $<span id="shipping">1299</span></h1>
  </div>
  <script src="apple.js"></script>
 </body>
